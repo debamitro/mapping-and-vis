@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+      // Load the Visualization API and the intensitymap package.
+      google.load('visualization', '1.0', {'packages':['table','intensitymap','geomap']});
+      
+function drawIntensityMap() {
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'State');
+  data.addColumn('number', 'Primary health centres', 'VALUE');
+  data.addRows([
+    ['Meghalaya', 16],
+    ['Punjab', 0]
+  ]);
+
+  var imap = new google.visualization.GeoMap(document.getElementById('intensitymap_div'));
+  imap.draw(data, 
+{ 
+  height: 480,
+  region:'IN',
+  dataMode:'regions',
+});
+        var table = new google.visualization.Table(document.getElementById('table_div'));
+        table.draw(data, {showRowNumber: true});
+  
+}
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawIntensityMap);
+
+    </script>
+  </head>
+
+  <body>
+<!--Div that will hold the pie chart-->
+    <div id="intensitymap_div" style="width:640px; height:480px; margin-left:auto; margin-right:auto; clear:both"></div>
+    <div id="table_div" style="width:640px; height:480px; margin-left:auto; margin-right:auto; clear:both; margin-top:10px"></div>
+  </body>
+</html>
