@@ -1,0 +1,82 @@
+{
+  name : 'Manipur',
+  coord: '           24.817,93.95'
+},
+{
+  name : 'Meghalaya',
+  coord: '         25.57,91.88'
+},
+{
+  name : 'Mizoram',
+  coord: '           25.57,91.88'
+},
+{
+  name : 'Nagaland',
+  coord: '          25.67,94.12'
+},
+{
+  name : 'Odisha',
+  coord: '            20.15,85.50'
+},
+{
+  name : 'Punjab',
+  coord: '            30.79,76.78'
+},
+{
+  name : 'Rajasthan',
+  coord: '         26.57268,73.83902'
+},
+{
+  name : 'Sikkim',
+  coord: '            27.33,88.62'
+},
+{
+  name : 'Tamil',
+  coord: ' Nadu        13.09,80.27'
+},
+{
+  name : 'Tripura',
+  coord: '           23.84,91.28'
+},
+{
+  name : 'Uttarakhand',
+  coord: '       30.33,78.06'
+},
+{
+  name : 'Uttar Pradesh',
+  coord :     '26.85,80.91'
+},
+{
+  name : 'West Bengal',
+  coord: '       22.567,88.367'
+},
+{
+  name : 'A& N Islands',
+  coord :      '11.68,92.77'
+},
+{
+  name : 'Chandigarh',
+  coord: '        30.79,76.78'
+},
+{
+  name : 'D & N Haveli',
+  coord :      '20.27,73.02'
+},
+{
+  name : 'Daman & Diu',
+  coord :       '20.42,72.83'
+},
+{
+  name : 'Delhi',
+  coord: '             28°36′36,77°13′48'
+},
+{
+  name : 'Lakshadweep',
+  coord: '       10.57,72.63'
+},
+{
+  name : 'Puducherry',
+  coord: '        11.93,79.83'
+}
+
+http://maps.googleapis.com/maps/api/staticmap?center=24,93&zoom=14&size=640x400&sensor=false

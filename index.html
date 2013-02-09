@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<script>
+var stateCoords = [
+{
+  name : 'Manipur',
+  coord: '           24.817,93.95'
+},
+{
+  name : 'Meghalaya',
+  coord: '         25.57,91.88'
+},
+{
+  name : 'Mizoram',
+  coord: '           25.57,91.88'
+},
+{
+  name : 'Nagaland',
+  coord: '          25.67,94.12'
+},
+{
+  name : 'Odisha',
+  coord: '            20.15,85.50'
+},
+{
+  name : 'Punjab',
+  coord: '            30.79,76.78'
+},
+{
+  name : 'Rajasthan',
+  coord: '         26.57268,73.83902'
+},
+{
+  name : 'Sikkim',
+  coord: '            27.33,88.62'
+},
+{
+  name : 'Tamil',
+  coord: ' Nadu        13.09,80.27'
+},
+{
+  name : 'Tripura',
+  coord: '           23.84,91.28'
+},
+{
+  name : 'Uttarakhand',
+  coord: '       30.33,78.06'
+},
+{
+  name : 'Uttar Pradesh',
+  coord :     '26.85,80.91'
+},
+{
+  name : 'West Bengal',
+  coord: '       22.567,88.367'
+},
+{
+  name : 'A& N Islands',
+  coord :      '11.68,92.77'
+},
+{
+  name : 'Chandigarh',
+  coord: '        30.79,76.78'
+},
+{
+  name : 'D & N Haveli',
+  coord :      '20.27,73.02'
+},
+{
+  name : 'Daman & Diu',
+  coord :       '20.42,72.83'
+},
+{
+  name : 'Delhi',
+  coord: '             28°36′36,77°13′48'
+},
+{
+  name : 'Lakshadweep',
+  coord: '       10.57,72.63'
+},
+{
+  name : 'Puducherry',
+  coord: '        11.93,79.83'
+}
+];
+  
+var stateList = [
+'Manipur',
+'Meghalaya',
+'Mizoram',
+'Nagaland',
+'Odisha',
+'Punjab',
+'Rajasthan',
+'Sikkim',
+'Tamil',
+'Tripura',
+'Uttarakhand',
+'Uttar Pradesh',
+'West Bengal',
+'A & N Islands',
+'Chandigarh',
+'D & N Haveli',
+'Daman & Diu',
+'Delhi',
+'Lakshadweep',
+'Puducherry'
+];
+
+var doctorData = [
+{
+ name: 'Doctors',
+ data: [240, 95.4128, 64.9123, 80.1587 , 42.7524, 109.1928, 97.0336, 162.5, 141.5282, 150.6329, 97.9079, 77.4919, 110.6711]
+}
+];
+
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'bar',
+            },
+            title: {
+                text: 'Public Health data for India'
+            },
+            subtitle: {
+                text: 'Source: Ashish Mukherjee'
+            },
+            xAxis: {
+                categories: stateList,
+                title: {
+                    text: 'states'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Doctors per 100 people',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                formatter: function() {
+                    //window.alert(this.series.name);
+                    return ''+
+                        this.series.name +': '+ this.y +' for 100 required';
+                }
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -100,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: doctorData
+        });
+    });
+    
+});
+</script>
+
+<div id="container" style="min-width: 400px; height: 600px; margin: 0 auto"></div>
+
+</html>
